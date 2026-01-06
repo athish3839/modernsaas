@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Homepage</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav h2 {
+      color: #7c3aed;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 120px 20px;
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, #7c3aed, #22c55e);
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .hero::before {
+      top: -100px;
+      left: -100px;
+    }
+
+    .hero::after {
+      bottom: -120px;
+      right: -120px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 620px;
+      margin: 0 auto 35px;
+    }
+
+    .hero button {
+      padding: 15px 36px;
+      border: none;
+      border-radius: 30px;
+      background: #ffffff;
+      color: #7c3aed;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* FEATURES */
+    .features {
+      padding: 90px 80px;
+      background: linear-gradient(180deg, #ecfdf5, #ffffff);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-box h3 {
+      color: #22c55e;
+      margin-bottom: 15px;
+    }
+
+    /* PRICING */
+    .pricing {
+      padding: 90px 80px;
+      background: linear-gradient(180deg, #f5f3ff, #ffffff);
+      text-align: center;
+    }
+
+    .pricing h2 {
+      color: #7c3aed;
+      margin-bottom: 40px;
+    }
+
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 18px;
+      width: 280px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .plan:hover {
+      transform: translateY(-6px);
+    }
+
+    .plan h3 {
+      color: #7c3aed;
+    }
+
+    .plan h1 {
+      margin: 20px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1e1b4b;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        padding: 20px;
+      }
+
+      .features,
+      .pricing {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>SaaSify</h2>
+    <div>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Grow Your Business Faster</h1>
+    <p>Modern SaaS platform with analytics, automation, and cloud solutions for scaling your business.</p>
+    <button>Get Started Free</button>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature-box">
+      <h3>Cloud Based</h3>
+      <p>Secure access to your data anytime, anywhere.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Smart Analytics</h3>
+      <p>Real-time insights to drive smarter decisions.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Automation</h3>
+      <p>Reduce manual work with automated workflows.</p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+    <h2>Simple Pricing</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Basic</h3>
+        <h1>₹0</h1>
+        <p>For individuals</p>
+      </div>
+      <div class="plan">
+        <h3>Pro</h3>
+        <h1>₹999 / month</h1>
+        <p>For small teams</p>
+      </div>
+      <div class="plan">
+        <h3>Enterprise</h3>
+        <h1>Custom</h1>
+        <p>For large organizations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SaaSify. All rights reserved.
+  </footer>
+
+</body>
+</html>
